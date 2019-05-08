@@ -1,0 +1,20 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 09.04.2019, 14:53:51
+    Author     : natalie1703
+*/
+
+.rouletteButton {
+    -fx-background-radius: 30px;
+}
+
+
+
+.list-cell {
+    -fx-control-inner-background:  #117f40 ;
+    -fx-control-inner-background-alt: derive(-fx-control-inner-background, 50%);
+}
