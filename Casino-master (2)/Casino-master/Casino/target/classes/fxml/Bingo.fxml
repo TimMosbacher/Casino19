@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="700.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.BingoController">
+    <stylesheets>
+        <URL value="@/styles/bingo.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="zufallszahl" layoutX="45.0" layoutY="14.0" text="Jettons" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="Gegenspieler" layoutX="45.0" layoutY="36.0" text="Gegenspieler" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="tischauswahl" layoutX="45.0" layoutY="58.0" text="tischauswahl" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <GridPane fx:id="karte" layoutX="175.0" layoutY="165.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="350.0" prefWidth="350.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+      <Button fx:id="Zufallszahl" layoutX="294.0" layoutY="11.0" mnemonicParsing="false" onAction="#Zufallszahl" text="Gib mir eine Karte" />
+      <Button fx:id="Bingo" layoutX="175.0" layoutY="524.0" mnemonicParsing="false" onAction="#Bingo" prefHeight="61.0" prefWidth="350.0" text="Bingo" textFill="#da0a0a">
+         <font>
+            <Font size="27.0" />
+         </font></Button>
+      <ScrollPane fx:id="pane" layoutX="97.0" layoutY="98.0" prefHeight="42.0" prefWidth="507.0">
+         <content>
+            <HBox fx:id="hBox" prefHeight="26.0" prefWidth="19.0" spacing="20.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

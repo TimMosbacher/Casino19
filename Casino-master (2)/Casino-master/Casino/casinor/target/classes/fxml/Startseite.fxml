@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.StartseiteController">
+   <children>
+      <ImageView fitHeight="392.0" fitWidth="590.0" layoutX="5.0" layoutY="10.0" onMouseClicked="#handlebuttonAnleitung" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Bilder/hintergrundroulette.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="235.0" layoutY="89.0" text="Roulette" textFill="#ff1a00">
+         <font>
+            <Font size="35.0" />
+         </font></Label>
+      <Button fx:id="zurückStartseite" layoutX="29.0" layoutY="174.0" mnemonicParsing="false" onAction="#handlebuttonzurueck" prefHeight="58.0" prefWidth="170.0" style="-fx-background-color: #117f40; -fx-text-fill: white;" text="zurück zur Spielauswahl">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonAnleitung" layoutX="216.0" layoutY="174.0" mnemonicParsing="false" onAction="#handlebuttonAntleitung" prefHeight="58.0" prefWidth="170.0" style="-fx-background-color: #117f40; -fx-text-fill: white;" text="Anleitung" />
+      <Button fx:id="ButtonStart" layoutX="397.0" layoutY="174.0" mnemonicParsing="false" onAction="#handlebuttonStart" prefHeight="58.0" prefWidth="170.0" style="-fx-background-color: #117f40; -fx-text-fill: white;" text="Spiel starten" />
+      <Label layoutX="53.0" layoutY="344.0" text="Kontostand" textFill="WHITE" />
+      <Label layoutX="132.0" layoutY="344.0" text="........" />
+      <Label layoutX="127.0" layoutY="40.0" text="Herzlich Willkommen zum Spiel" textAlignment="CENTER" textFill="#fdfcfc">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

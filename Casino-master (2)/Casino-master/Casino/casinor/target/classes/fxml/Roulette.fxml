@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.RouletteController">
+   <children>
+      <ImageView fitHeight="898.0" fitWidth="1378.0" layoutX="-8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Bilder/hintergrundroulette.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="346.0" fitWidth="694.0" layoutX="609.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true" style="-fx-border-color: red;">
+         <image>
+            <Image url="@../Bilder/roulette-table.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="button3" layoutX="679.0" layoutY="127.0" mnemonicParsing="false" onAction="#handlebutton3" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="3" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button1" layoutX="680.0" layoutY="255.0" mnemonicParsing="false" onAction="#handlebutton1" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="1" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button14" layoutX="868.0" layoutY="194.0" mnemonicParsing="false" onAction="#handlebutton14" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="14" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button12" layoutX="820.0" layoutY="127.0" mnemonicParsing="false" onAction="#handlebutton12" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="12" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button21" layoutX="963.0" layoutY="127.0" mnemonicParsing="false" onAction="#handlebutton21" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="21" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button23" layoutX="1010.0" layoutY="192.0" mnemonicParsing="false" onAction="#handlebutton23" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="23" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button27" layoutX="1057.0" layoutY="127.0" mnemonicParsing="false" onAction="#handlebutton27" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="27" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button30" layoutX="1104.0" layoutY="127.0" mnemonicParsing="false" onAction="#handlebutton30" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="30" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button10" layoutX="820.0" layoutY="255.0" mnemonicParsing="false" onAction="#handlebutton10" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="10" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button4" layoutX="727.0" layoutY="255.0" mnemonicParsing="false" onAction="#handlebutton4" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="4" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button8" layoutX="774.0" layoutY="191.0" mnemonicParsing="false" onAction="#handlebutton8" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="8" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button11" layoutX="821.0" layoutY="192.0" mnemonicParsing="false" onAction="#handlebutton11" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="11" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button15" layoutX="868.0" layoutY="127.0" mnemonicParsing="false" onAction="#handlebutton15" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="15" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button31" layoutX="1151.0" layoutY="254.0" mnemonicParsing="false" onAction="#handlebutton31" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="31" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button22" layoutX="1010.0" layoutY="254.0" mnemonicParsing="false" onAction="#handlebutton22" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="22" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button28" layoutX="1104.0" layoutY="255.0" mnemonicParsing="false" onAction="#handlebutton28" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="28" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button29" layoutX="1104.0" layoutY="192.0" mnemonicParsing="false" onAction="#handlebutton29" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="29" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button26" layoutX="1056.0" layoutY="192.0" mnemonicParsing="false" onAction="#handlebutton26" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="26" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button33" layoutX="1150.0" layoutY="127.0" mnemonicParsing="false" onAction="#handlebutton33" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="33" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button24" layoutX="1009.0" layoutY="128.0" mnemonicParsing="false" onAction="#handlebutton24" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="24" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button20" layoutX="962.0" layoutY="191.0" mnemonicParsing="false" onAction="#handlebutton20" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="20" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button17" layoutX="916.0" layoutY="191.0" mnemonicParsing="false" onAction="#handlebutton17" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="17" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button13" layoutX="868.0" layoutY="256.0" mnemonicParsing="false" onAction="#handlebutton13" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="13" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button35" layoutX="1197.0" layoutY="190.0" mnemonicParsing="false" onAction="#handlebutton35" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="35" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button5" layoutX="727.0" layoutY="192.0" mnemonicParsing="false" onAction="#handlebutton5" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="5" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button1to18" layoutX="683.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#handlebutton1to18" prefHeight="63.0" prefWidth="93.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="1 to 18">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="buttoneven" layoutX="777.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#handlebuttoneven" prefHeight="63.0" prefWidth="93.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="EVEN">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="buttonred" layoutX="872.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#handlebuttonred" prefHeight="63.0" prefWidth="93.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="RED">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="buttonblack" layoutX="965.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#handlebuttonblack" prefHeight="63.0" prefWidth="93.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="BLACK">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="buttonodd" layoutX="1059.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#handlebuttonodd" prefHeight="63.0" prefWidth="93.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="ODD">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="button19to36" layoutX="1153.0" layoutY="368.0" mnemonicParsing="false" onMouseClicked="#handlebutton19to36" prefHeight="63.0" prefWidth="93.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="19 to 36">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="button1st12" layoutX="683.0" layoutY="306.0" mnemonicParsing="false" onAction="#handlebutton1st12" prefHeight="63.0" prefWidth="187.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="1st 12">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="button2nd12" layoutX="872.0" layoutY="306.0" mnemonicParsing="false" onAction="#handlebutton2nd12" prefHeight="63.0" prefWidth="187.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="2nd 12">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="button3rd12" layoutX="1060.0" layoutY="306.0" mnemonicParsing="false" onAction="#handlebutton3rd12" prefHeight="63.0" prefWidth="187.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="3rd 12">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="button2to11" layoutX="1236.0" layoutY="254.0" mnemonicParsing="false" onAction="#handle2to11" prefHeight="35.0" prefWidth="62.0" rotate="-90.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="2 to 1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="button2to12" layoutX="1236.0" layoutY="191.0" mnemonicParsing="false" onAction="#handlebutton2to12" prefHeight="35.0" prefWidth="62.0" rotate="-90.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="2 to 1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="button2to13" layoutX="1236.0" layoutY="128.0" mnemonicParsing="false" onAction="#handelbutton2to13" prefHeight="35.0" prefWidth="62.0" rotate="-90.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="2 to 1">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="button00" layoutX="603.0" layoutY="129.0" mnemonicParsing="false" onAction="#handlebutton00" prefHeight="62.0" prefWidth="94.0" rotate="-90.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="00">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="button0" layoutX="603.0" layoutY="227.0" mnemonicParsing="false" onAction="#handlebutton0" prefHeight="62.0" prefWidth="94.0" rotate="-90.0" style="-fx-background-color: #117f40; -fx-border-color: white; -fx-border-width: 2px;" text="0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Pane fx:id="pane1" layoutX="665.0" layoutY="293.0" onMouseClicked="#handel01" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+     
+      <Pane fx:id="pane2" layoutX="670.0" layoutY="229.0" onMouseClicked="#handel12" prefHeight="22.0" prefWidth="36.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <children>
+              
+            <Pane fx:id="panel28293132" layoutX="-5.0" layoutY="1.0" onMouseClicked="#handel28293132" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Pane>
+         </children></Pane>
+      
+           
+      <Pane fx:id="pane3" layoutX="667.0" layoutY="165.0" onMouseClicked="#handel23" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+    
+      <Pane fx:id="pane2536" layoutX="712.0" layoutY="165.0" onMouseClicked="#handel2356" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane layoutX="713.0" layoutY="104.0" onMouseClicked="#handel36" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane6" layoutX="758.0" layoutY="293.0" onMouseClicked="#handel47" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane fx:id="pane19202223" layoutX="993.0" layoutY="230.0" onMouseClicked="#handel19202223" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane5689" layoutX="758.0" layoutY="166.0" onMouseClicked="#handel5689" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane fx:id="pane9" layoutX="759.0" layoutY="104.0" onMouseClicked="#handel69" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      
+      <Pane fx:id="pane23242627" layoutX="1042.0" layoutY="166.0" onMouseClicked="#handel23242627" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      
+      <Pane fx:id="pane1316" layoutX="899.0" layoutY="293.0" onMouseClicked="#handel1316" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane layoutX="994.0" layoutY="293.0" onMouseClicked="#handel1922" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane fx:id="pane17" layoutX="853.0" layoutY="104.0" onMouseClicked="#handel1215" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane13" layoutX="806.0" layoutY="104.0" onMouseClicked="#handel912" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane14151718" layoutX="899.0" layoutY="166.0" onMouseClicked="#handel14151718" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane14" layoutX="852.0" layoutY="293.0" onMouseClicked="#handel1013" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane fx:id="pane10111314" layoutX="852.0" layoutY="229.0" onMouseClicked="#handel10111314" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane fx:id="pane10" layoutX="805.0" layoutY="293.0" onMouseClicked="#handel710" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane781011" layoutX="805.0" layoutY="228.0" onMouseClicked="#handel781011" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane891112" layoutX="806.0" layoutY="167.0" onMouseClicked="#handel891112" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane layoutX="899.0" layoutY="104.0" onMouseClicked="#handel1518" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane fx:id="pane13141617" layoutX="900.0" layoutY="229.0" onMouseClicked="#handel13141617" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane layoutX="948.0" layoutY="104.0" onMouseClicked="#handel1821" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane17182021" layoutX="948.0" layoutY="166.0" onMouseClicked="#handel17182021" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane fx:id="pane16171920" layoutX="947.0" layoutY="229.0" onMouseClicked="#handel16171920" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane1629" layoutX="948.0" layoutY="293.0" onMouseClicked="#handel1619" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+      <Pane fx:id="pane4578" layoutX="758.0" layoutY="228.0" onMouseClicked="#handel4578" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+     
+      <Pane fx:id="pane11141215" layoutX="853.0" layoutY="166.0" onMouseClicked="#handel11141215" prefHeight="22.0" prefWidth="36.0">
+         <children>
+               
+            <Pane fx:id="pane16" layoutX="-1.0" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+         </children></Pane>
+      <Pane fx:id="pane1245" layoutX="712.0" layoutY="229.0" onMouseClicked="#handel1245" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+      <Button fx:id="button36" layoutX="1197.0" layoutY="127.0" mnemonicParsing="false" onAction="#handlebutton36" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="36" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button32" layoutX="1150.0" layoutY="191.0" mnemonicParsing="false" onAction="#handlebutton32" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="32" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button2" layoutX="680.0" layoutY="192.0" mnemonicParsing="false" onAction="#handlebutton2" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="2" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button6" layoutX="727.0" layoutY="128.0" mnemonicParsing="false" onAction="#handlebutton6" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: black; -fx-text-fill: white;" text="6" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+       
+      
+      <Pane fx:id="pane4" layoutX="712.0" layoutY="295.0" onMouseClicked="#handel14" prefHeight="22.0" prefWidth="36.0">
+         <children>
+             
+            <Pane layoutY="-1.0" onMouseClicked="#handel3134" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Pane>
+         </children></Pane>
+         
+      <Pane fx:id="pane2124" layoutX="994.0" layoutY="104.0" onMouseClicked="#handel2124" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+       
+      <Pane fx:id="pane20212324" layoutX="995.0" layoutY="166.0" onMouseClicked="#handel20212324" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+       
+ 
+        
+      <Pane layoutX="1042.0" layoutY="293.0" onMouseClicked="#handel2225" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane22232526" layoutX="1041.0" layoutY="230.0" onMouseClicked="#handel22232526" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+     
+        
+      <Pane layoutX="1089.0" layoutY="293.0" onMouseClicked="#handel2528" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane25262829" layoutX="1088.0" layoutY="229.0" onMouseClicked="#handel25262829" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+       
+      <Pane fx:id="panel26272930" layoutX="1088.0" layoutY="166.0" onMouseClicked="#handel26272930" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane2730" layoutX="1088.0" layoutY="104.0" onMouseClicked="#handel2730" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane2831" layoutX="1136.0" layoutY="292.0" onMouseClicked="#handel2831" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="panel29303233" layoutX="1136.0" layoutY="229.0" onMouseClicked="#handel29303233" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="pane3033" layoutX="1137.0" layoutY="104.0" onMouseClicked="#handel3033" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Pane fx:id="panel31323435" layoutX="1136.0" layoutY="165.0" onMouseClicked="#handel31323435" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane fx:id="pane32333536" layoutX="1041.0" layoutY="104.0" onMouseClicked="#handel32333536" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+         
+      <Pane fx:id="pane3134" layoutX="1182.0" layoutY="292.0" onMouseClicked="#handel3336" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+        
+      <Label layoutX="41.0" layoutY="31.0" text="Roulette" textFill="WHITE">
+         <font>
+            <Font size="41.0" />
+         </font></Label>
+      <Label layoutX="69.0" layoutY="842.0" prefHeight="18.0" prefWidth="142.0" text="Kontostand" textFill="WHITE" />
+      <ImageView fx:id="jeton5" fitHeight="79.0" fitWidth="72.0" layoutX="1119.0" layoutY="453.0" onMousePressed="#handleChip5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Bilder/jetton5.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="jeton10" fitHeight="71.0" fitWidth="68.0" layoutX="995.0" layoutY="455.0" onMousePressed="#handleChip10" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Bilder/jetton101.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="jeton50" fitHeight="71.0" fitWidth="72.0" layoutX="859.0" layoutY="454.0" onMousePressed="#handleChip50" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Bilder/jetton50.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="jeton100" fitHeight="72.0" fitWidth="68.0" layoutX="748.0" layoutY="456.0" onMousePressed="#handleChip100" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Bilder/jetton100000.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+         
+      <ListView fx:id="listview1" layoutX="147.0" layoutY="491.0" prefHeight="332.0" prefWidth="422.0" style="-fx-background-color: #117f40; -fx-text-fill: WHITE;" />
+      <Button fx:id="buttonrueckgaenig" layoutX="427.0" layoutY="829.0" mnemonicParsing="false" onAction="#buttonrueckgaenig" style="-fx-background-color: #117f40; -fx-text-fill: white;" text="Letzter Zug Rückgängig" />
+      <Pane fx:id="pane31323435" layoutX="1183.0" layoutY="229.0" onMouseClicked="#handel2427" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Pane>
+      <ImageView fx:id="imageviewgif" fitHeight="293.0" fitWidth="430.0" layoutX="147.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Bilder/radmitnullnull.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttongif" layoutX="263.0" layoutY="263.0" mnemonicParsing="false" onAction="#buttonhandlestartgif" style="-fx-background-color: #117f40; -fx-text-fill: white;" text="Zahlrad starten" />
+      <Button fx:id="button9" layoutX="774.0" layoutY="128.0" mnemonicParsing="false" onAction="#handlebutton9" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="9" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button25" layoutX="1057.0" layoutY="255.0" mnemonicParsing="false" onAction="#handlebutton25" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="25" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button19" layoutX="963.0" layoutY="255.0" mnemonicParsing="false" onAction="#handlebutton19" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="19" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button16" layoutX="916.0" layoutY="257.0" mnemonicParsing="false" onAction="#handlebutton16" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="16" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button7" layoutX="774.0" layoutY="254.0" mnemonicParsing="false" onAction="#handlebutton7" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="7" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button34" layoutX="1198.0" layoutY="252.0" mnemonicParsing="false" onAction="#handlebutton34" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="34" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="button18" layoutX="915.0" layoutY="127.0" mnemonicParsing="false" onAction="#handlebutton18" prefHeight="36.0" prefWidth="52.0" rotate="-90.0" style="-fx-background-radius: 20px; -fx-background-color: red; -fx-text-fill: white;" text="18" textOverrun="CLIP">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="GewinnVerlust" alignment="CENTER" contentDisplay="CENTER" layoutX="748.0" layoutY="611.0" prefHeight="94.0" prefWidth="436.0" style="-fx-background-color: #117f40; -fx-text-fill: red;">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Pane fx:id="pane3336" layoutX="1182.0" layoutY="104.0" onMouseClicked="#handel2427" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Pane fx:id="pane32353336" layoutX="1182.0" layoutY="167.0" onMouseClicked="#handel2427" prefHeight="22.0" prefWidth="36.0" style="-fx-border-color: red;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+      <Label layoutX="158.0" layoutY="447.0" text="Ihre Zahl" textFill="WHITE" />
+      <Label fx:id="ausgegebeneZahl" layoutX="254.0" layoutY="429.0" prefHeight="52.0" prefWidth="142.0" text=".........." textFill="WHITE">
+         <font>
+            <Font size="25.0" />
+         </font></Label>
+      <Button fx:id="abbrechen" layoutX="1230.0" layoutY="48.0" mnemonicParsing="false" onMouseClicked="#handlebuttonabbrechen" style="-fx-background-color: #117f40; -fx-text-fill: white;" text="Abbrechen">
+         <effect>
+            <Glow />
+         </effect>
+      </Button>
+      <Button fx:id="buttonNeuspielen" layoutX="484.0" layoutY="280.0" mnemonicParsing="false" onAction="#neuSpielen" style="-fx-background-color: #117f40; -fx-text-fill: white;" text="Erneut" visible="false" />
+      <Button layoutX="1038.0" layoutY="48.0" mnemonicParsing="false" onAction="#zurückaufstart" style="-fx-background-color: #117f40; -fx-text-fill: white;" text="Zurück auf Startseite" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="Window" prefHeight="640.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.InformationController">
+   <children>
+      <Label fx:id="titel" layoutX="14.0" layoutY="266.0" text="Spielregeln">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="rules" layoutX="14.0" layoutY="310.0" text="Rules">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="tite2" layoutX="14.0" layoutY="72.0" text="Hot to play?">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="HTP" layoutX="14.0" layoutY="122.0" text="HTP">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="WindowTitel" layoutX="215.0" layoutY="14.0" text="Information">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

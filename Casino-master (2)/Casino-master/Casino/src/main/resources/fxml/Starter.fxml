@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPane" prefHeight="438.0" prefWidth="515.0" stylesheets="@../styles/Styles.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.StarterController">
+    <children>
+        <Button fx:id="startBtn" layoutX="231.0" layoutY="383.0" onAction="#start" text="Start" />
+      <ImageView fx:id="information" fitHeight="48.0" fitWidth="46.0" layoutX="455.0" layoutY="16.0" onMouseClicked="#information" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="jet" layoutX="25.0" layoutY="49.0" text="Jettons: " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="titel" layoutX="161.0" layoutY="16.0" text="Welcome to Bingo" textFill="WHITE">
+         <font>
+            <Font name="Lucida Sans Demibold" size="21.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listview" layoutX="248.0" layoutY="151.0" prefHeight="178.0" prefWidth="242.0" />
+      <Label fx:id="tischauswahl" layoutX="248.0" layoutY="120.0" text="Tischauswahl:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="jet1" layoutX="25.0" layoutY="120.0" text="Anzahl Gegner:" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <ListView fx:id="listview1" layoutX="25.0" layoutY="151.0" prefHeight="178.0" prefWidth="101.0" />
+    </children>
+</AnchorPane>
