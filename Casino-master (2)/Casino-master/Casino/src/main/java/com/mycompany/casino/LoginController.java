@@ -12,11 +12,18 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -61,13 +68,26 @@ public class LoginController implements Initializable {
        Optional<Benutzer> userResult = db.authenticate(user, password);
        if (userResult.isPresent())
        {
-           System.out.println("Login successful, id=" + userResult.get().getId());
-       }
+         
+      
+        try {
+          
+          FXMLLoader loader = new FXMLLoader();
+          Parent root = loader.load(getClass().getResource("/fxml/Scene.fxml"));
+          Node node = (Node) e.getSource();
+          Stage s = (Stage) node.getScene().getWindow();
+          s.setScene(new Scene (root));
+    
+        } catch (IOException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+           }
+       
        else{
            System.out.println("User not found!");
        }
 
-
+    }
 
     }
 
@@ -76,4 +96,4 @@ public class LoginController implements Initializable {
 
 
 
-}
+
