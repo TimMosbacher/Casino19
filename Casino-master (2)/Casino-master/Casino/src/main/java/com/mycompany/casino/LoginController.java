@@ -41,6 +41,8 @@ public class LoginController implements Initializable {
     private TextField password_text;
     @FXML
     private Button submit;
+    @FXML
+    private Button register;
 
     /**
      * Initializes the controller class.
@@ -87,6 +89,21 @@ public class LoginController implements Initializable {
            System.out.println("User not found!");
        }
 
+    }
+
+    @FXML
+    private void register(ActionEvent event) {
+        FXMLLoader loader = new FXMLLoader();
+          Parent root;
+        try {
+            root = loader.load(getClass().getResource("/fxml/Registration.fxml"));
+            Node node = (Node) event.getSource();
+          Stage s = (Stage) node.getScene().getWindow();
+          s.setScene(new Scene (root));
+        } catch (IOException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+          
     }
 
     }
