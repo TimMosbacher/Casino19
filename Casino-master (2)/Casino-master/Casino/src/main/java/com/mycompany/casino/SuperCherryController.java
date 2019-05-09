@@ -36,12 +36,12 @@ import javafx.util.Duration;
  */
 public class SuperCherryController implements Initializable {
 
-    public int stop = 0;
-    public boolean gewonnen = false;
-    public int guthabenint = 10000;
-    public int pot = 0;
-    public Timeline timeline = new Timeline();
-    public Timeline timelinegamble = new Timeline();
+    
+    private boolean gewonnen = false;
+    private int guthabenint = 10000;
+    private int pot = 0;
+    private Timeline timeline = new Timeline();
+    private Timeline timelinegamble = new Timeline();
     private  boolean gamblewin = false;
     private int mal2;
     private int betint= 1;
