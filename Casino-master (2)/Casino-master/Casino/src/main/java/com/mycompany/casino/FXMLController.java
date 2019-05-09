@@ -1,4 +1,4 @@
-package com.mycompany.blackjack;
+package com.mycompany.casino;
 
 import java.net.URL;
 import java.util.Observable;
