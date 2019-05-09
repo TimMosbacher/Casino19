@@ -68,7 +68,6 @@ public class StarterController implements Initializable {
     @FXML
     private void information(MouseEvent event) throws IOException {
         Stage stage = new Stage();
-        System.out.println(" FLO ESCH GAYYYY");
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/Information.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
