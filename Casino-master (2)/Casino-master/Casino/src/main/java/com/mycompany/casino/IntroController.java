@@ -7,6 +7,8 @@
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -64,6 +66,17 @@ public class IntroController implements Initializable {
 
     @FXML
     private void pressbeenden(ActionEvent event) {
+        
+          FXMLLoader loader = new FXMLLoader();
+          Parent root;
+        try {
+            root = loader.load(getClass().getResource("/fxml/CasinoStarter.fxml"));
+            Node node = (Node) event.getSource();
+          Stage s = (Stage) node.getScene().getWindow();
+          s.setScene(new Scene (root));
+        } catch (IOException ex) {
+            Logger.getLogger(com.mycompany.casino.LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }

@@ -72,13 +72,13 @@ public class CasinoStarterController implements Initializable {
     }
 
     @FXML
-    private void slotMach(ActionEvent event) throws IOException {
+    private void slotMachine(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         FXMLLoader loader =  new FXMLLoader(getClass().getResource("/fxml/SuperCherry.fxml"));
         Parent root = (Parent) loader.load();
         Scene scene = new Scene(root);
         stage.setScene(scene);
-         scene.getStylesheets().add("/styles/bingo.css");
+         
         stage.setResizable(false);
         stage.show();
         Stage stage1 = (Stage) slotMach.getScene().getWindow();
