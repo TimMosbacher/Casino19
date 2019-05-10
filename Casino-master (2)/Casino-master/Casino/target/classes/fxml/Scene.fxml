@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane id="AnchorPane" prefHeight="975.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.blackjack.FXMLController">
+<AnchorPane id="AnchorPane" prefHeight="975.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.casino.FXMLController">
    <children>
       <BorderPane layoutX="-8.0" layoutY="-5.0" prefHeight="975.0" prefWidth="1302.0">
          <center>
@@ -88,6 +88,7 @@
                   <Button fx:id="nocheine" layoutX="912.0" layoutY="67.0" mnemonicParsing="false" onAction="#pressnocheine" text="nocheine" />
                   <Button fx:id="neuesSpiel" layoutX="321.0" layoutY="67.0" mnemonicParsing="false" onAction="#neuesSpielpress" text="Neues Deck" />
                   <Button fx:id="stand" layoutX="625.0" layoutY="67.0" mnemonicParsing="false" onAction="#standpress" text="Stand" />
+                  <Button fx:id="back" layoutX="33.0" layoutY="67.0" mnemonicParsing="false" onAction="#back" text="Back" />
                </children></Pane>
          </bottom>
          <right>

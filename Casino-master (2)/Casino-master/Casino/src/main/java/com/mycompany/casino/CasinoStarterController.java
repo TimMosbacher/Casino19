@@ -72,7 +72,7 @@ public class CasinoStarterController implements Initializable {
     }
 
     @FXML
-    private void slotMachine(ActionEvent event) throws IOException {
+    private void slotMach(ActionEvent event) throws IOException {
         Stage stage = new Stage();
         FXMLLoader loader =  new FXMLLoader(getClass().getResource("/fxml/SuperCherry.fxml"));
         Parent root = (Parent) loader.load();

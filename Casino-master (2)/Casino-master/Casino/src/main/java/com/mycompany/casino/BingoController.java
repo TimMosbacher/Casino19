@@ -17,10 +17,13 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.HPos;
 import javafx.scene.Group;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
@@ -53,8 +56,6 @@ public class BingoController implements Initializable {
     private Button Bingo;
     @FXML
     private AnchorPane anchorPane;
-    @FXML
-    private ImageView kartePng;
 
     GUILoader gl = new GUILoader();
     String verloren = "VerlorenScreen";
@@ -79,6 +80,8 @@ public class BingoController implements Initializable {
     ArrayList<Integer> numbers = new ArrayList<>();
     CheckBingo cb = new CheckBingo();
     boolean bingoPlayer = false;
+    @FXML
+    private Button back;
 
     /**
      * Initializes the controller class.
@@ -217,5 +220,19 @@ public class BingoController implements Initializable {
         return null;
 
     }
+    private void back(ActionEvent event) {
+        
+          FXMLLoader loader = new FXMLLoader();
+          Parent root;
+        try {
+            root = loader.load(getClass().getResource("/fxml/CasinoStarter.fxml"));
+            Node node = (Node) event.getSource();
+          Stage s = (Stage) node.getScene().getWindow();
+          s.setScene(new Scene (root));
+        } catch (IOException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+}
 
 }

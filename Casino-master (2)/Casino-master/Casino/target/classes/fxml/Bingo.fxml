@@ -54,5 +54,6 @@
             <HBox fx:id="hBox" prefHeight="26.0" prefWidth="19.0" spacing="20.0" />
          </content>
       </ScrollPane>
+      <Button fx:id="back" layoutX="33.0" layoutY="533.0" mnemonicParsing="false" onAction="#back" prefHeight="42.0" prefWidth="84.0" text="zurück" />
    </children>
 </AnchorPane>

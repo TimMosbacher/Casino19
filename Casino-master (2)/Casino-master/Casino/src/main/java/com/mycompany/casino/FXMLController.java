@@ -1,15 +1,23 @@
 package com.mycompany.casino;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class FXMLController implements Initializable, Observer {
     
@@ -56,6 +64,8 @@ public class FXMLController implements Initializable, Observer {
     private Label vErrorGrund;
     @FXML
     private Label vAnz;
+    @FXML
+    private Button back;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -246,5 +256,20 @@ public class FXMLController implements Initializable, Observer {
         doubleError1.setVisible(false);
         doubleError2.setVisible(false);
     }
+     @FXML
+    private void back(ActionEvent event) {
+        
+          FXMLLoader loader = new FXMLLoader();
+          Parent root;
+        try {
+            root = loader.load(getClass().getResource("/fxml/CasinoStarter.fxml"));
+            Node node = (Node) event.getSource();
+          Stage s = (Stage) node.getScene().getWindow();
+          s.setScene(new Scene (root));
+        } catch (IOException ex) {
+            Logger.getLogger(LoginController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+}
     
 }

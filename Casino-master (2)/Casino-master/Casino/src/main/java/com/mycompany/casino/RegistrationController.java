@@ -8,12 +8,19 @@ package com.mycompany.casino;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -32,7 +39,7 @@ public class RegistrationController implements Initializable {
     @FXML
     private Button submit_but;
     @FXML
-    private PasswordField guthaben_field;
+    private TextField guthaben_field;
 
     /**
      * Initializes the controller class.
@@ -49,23 +56,34 @@ public class RegistrationController implements Initializable {
             System.out.println("LOOL");
         }else{
         
-        usern=usern_text.getText();
-        
-        pass = pass_text.getText();
-       Datenbank db = new Datenbank();
        try{
-           db.loadUsers();
+
+           usern=usern_text.getText();
+           
+           pass = pass_text.getText();
+           Datenbank db = new Datenbank();
+           try{
+               db.loadUsers();
+           } catch (IOException ex){
+               System.out.println("Database machine broke");
+               return;
+           }
+           
+           try{
+               db.addUser(usern, pass, Integer.parseInt(guthaben_field.getText()));
+           } catch (IOException ex){
+               System.out.println("this name already exist");
+               return;
+           }
+           FXMLLoader loader = new FXMLLoader();
+           Stage s = (Stage) ((Node) (e.getSource())).getScene().getWindow();
+           Parent root = loader.load(getClass().getResource("/fxml/Login.fxml"));
+           s.setTitle("My New Stage Title");
+           s.setScene(new Scene(root));
+           s.show();
        } catch (IOException ex){
-           System.out.println("Database machine broke");
-           return;
+                Logger.getLogger(RegistrationController.class.getName()).log(Level.SEVERE, null, ex);
        }
-       
-       try{
-           db.addUser(usern, pass, Integer.parseInt(guthaben_field.getText()));
-       } catch (IOException ex){
-           System.out.println("this name already exist");
-       }
-       
         }
         
     }
