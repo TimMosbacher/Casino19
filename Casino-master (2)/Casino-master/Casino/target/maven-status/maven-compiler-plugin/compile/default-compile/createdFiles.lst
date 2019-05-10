@@ -34,3 +34,4 @@ com\mycompany\casino\MainApp.class
 com\mycompany\casino\Datenbank.class
 com\mycompany\casino\InformationController.class
 com\mycompany\casino\GUILoader.class
+com\mycompany\casino\CasinoStarterController.class
