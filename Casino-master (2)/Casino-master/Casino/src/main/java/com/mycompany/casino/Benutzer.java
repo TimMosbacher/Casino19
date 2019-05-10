@@ -14,45 +14,41 @@ import java.util.Objects;
  */
 public class Benutzer {
     private String name,passwort;
-    private int id;
+    private int id, guthaben;
    
     public Benutzer(String name, String passwort) {
-        this(name, passwort, -1);
+        this(name, passwort, -1, 100);
     }
     
-    public Benutzer(String name, String passwort, int id) {
+    public Benutzer(String name, String passwort, int id, int guthaben) {
         this.name = name;
         this.passwort = passwort;
         this.id=id;
+        this.guthaben = guthaben;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getPasswort() {
         return passwort;
     }
 
-    public void setPasswort(String passwort) {
-        this.passwort = passwort;
-    }
+ 
 
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getGuthaben() {
+        return guthaben;
     }
 
-   public String toString(){
-       return "Benutzername: " + name + " Passwort: " + passwort + " Id: " + id;
-   } 
+  
+
+
 
     @Override
     public int hashCode() {

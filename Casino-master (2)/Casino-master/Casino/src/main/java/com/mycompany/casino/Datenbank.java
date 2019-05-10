@@ -28,7 +28,7 @@ public class Datenbank implements DatenSpeicher {
 
     private ArrayList<Benutzer> benutzer = new ArrayList<Benutzer>();
 
-    Connection con;
+    private Connection con;
 
     public Datenbank() {
         try {
@@ -47,7 +47,7 @@ public class Datenbank implements DatenSpeicher {
             ResultSet rs = st.executeQuery("SELECT * FROM Benutzer");
 
             while (rs.next()) {
-                benutzer.add(new Benutzer(rs.getString(1), rs.getString(2), rs.getInt(3)));
+                benutzer.add(new Benutzer(rs.getString(1), rs.getString(2), rs.getInt(3), rs.getInt(4)));
             }
         } catch (SQLException ex) {
             throw new IOException(ex);
@@ -61,7 +61,7 @@ public class Datenbank implements DatenSpeicher {
         return DatatypeConverter.printHexBinary(digest).toUpperCase();
     }
 
-    public void addUser(String username, String password) throws IOException {
+    public void addUser(String username, String password, int guthaben) throws IOException {
 
         try {
             for (Benutzer user : benutzer) {
@@ -70,9 +70,10 @@ public class Datenbank implements DatenSpeicher {
                 }
             }
 
-            PreparedStatement pstmt = con.prepareStatement("INSERT INTO benutzer (Name, Passwort) VALUES (?, ?)");
+            PreparedStatement pstmt = con.prepareStatement("INSERT INTO benutzer (Name, Passwort, Guthaben) VALUES (?, ?, ?)");
             pstmt.setString(1, username);
             pstmt.setString(2, calculateHash(password));
+            pstmt.setInt(3, guthaben);
             pstmt.execute();
             benutzer.add(new Benutzer(username, password));
         } catch (SQLException ex) {
@@ -96,5 +97,18 @@ public class Datenbank implements DatenSpeicher {
             Logger.getLogger(Datenbank.class.getName()).log(Level.SEVERE, null, ex);
         }
         return Optional.empty();
+    }
+    public void updateUser(Benutzer user){
+         PreparedStatement pstmt;
+        try {
+            pstmt = con.prepareStatement("UPDATE Benutzer SET guthaben = ? WHERE Benutzer.Name = ?");
+             pstmt.setInt(1, user.getGuthaben());
+             pstmt.setString(2, user.getName());
+            pstmt.execute();
+        } catch (SQLException ex) {
+            Logger.getLogger(Datenbank.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        ;
+        
     }
 }

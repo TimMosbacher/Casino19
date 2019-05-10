@@ -28,10 +28,11 @@ public class RegistrationController implements Initializable {
     private TextField usern_text;
     @FXML
     private PasswordField pass_text;
-    @FXML
     private PasswordField passw_text;
     @FXML
     private Button submit_but;
+    @FXML
+    private PasswordField guthaben_field;
 
     /**
      * Initializes the controller class.
@@ -60,9 +61,9 @@ public class RegistrationController implements Initializable {
        }
        
        try{
-           db.addUser(usern, pass);
+           db.addUser(usern, pass, Integer.parseInt(guthaben_field.getText()));
        } catch (IOException ex){
-           System.out.println("BOOOOY or GIIIIRRRRRLLLLLL, this name already exist");
+           System.out.println("this name already exist");
        }
        
         }
