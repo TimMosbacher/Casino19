@@ -50,12 +50,16 @@ public class IntroController implements Initializable {
     }    
    
     @FXML
-    private void pressStart(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader();
-        Parent root = loader.load(getClass().getResource("/fxml/Scene.fxml"));
-        Node node = (Node) event.getSource();
-        Stage s = (Stage) node.getScene().getWindow();
-        s.setScene(new Scene(root));
+    private void pressStart(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            Parent root = loader.load(getClass().getResource("/fxml/Scene.fxml"));
+            Node node = (Node) event.getSource();
+            Stage s = (Stage) node.getScene().getWindow();
+            s.setScene(new Scene(root));
+        } catch (IOException ex) {
+            Logger.getLogger(IntroController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     @FXML
@@ -65,18 +69,19 @@ public class IntroController implements Initializable {
     }
 
     @FXML
-    private void pressbeenden(ActionEvent event) {
-        
-          FXMLLoader loader = new FXMLLoader();
-          Parent root;
+
+
+   
+    private void pressbeenden(ActionEvent event){
         try {
-            root = loader.load(getClass().getResource("/fxml/CasinoStarter.fxml"));
+            FXMLLoader loader = new FXMLLoader();
+            Parent root = loader.load(getClass().getResource("/fxml/CasinoStarter.fxml"));
             Node node = (Node) event.getSource();
-          Stage s = (Stage) node.getScene().getWindow();
-          s.setScene(new Scene (root));
+            Stage s = (Stage) node.getScene().getWindow();
+            s.setScene(new Scene(root));
         } catch (IOException ex) {
-            Logger.getLogger(com.mycompany.casino.LoginController.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(IntroController.class.getName()).log(Level.SEVERE, null, ex);
         }
+
     }
-    
 }
