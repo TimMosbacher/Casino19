@@ -63,7 +63,12 @@ public class IntroController implements Initializable {
     }
 
     @FXML
-    private void pressbeenden(ActionEvent event) {
+   
+    private void pressbeenden(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        Parent root = loader.load(getClass().getResource("/fxml/CasinoStarter.fxml"));
+        Node node = (Node) event.getSource();
+        Stage s = (Stage) node.getScene().getWindow();
+        s.setScene(new Scene(root));
     }
-    
 }
